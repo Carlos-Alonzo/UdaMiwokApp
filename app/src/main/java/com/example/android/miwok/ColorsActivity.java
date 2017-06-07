@@ -31,14 +31,14 @@ public class ColorsActivity extends AppCompatActivity {
         //ArrayList of numbers to store list of words
         ArrayList<Word> words = new ArrayList<>();
 
-        words.add(new Word("wetetti","red"));
-        words.add(new Word("chokokki","green"));
-        words.add(new Word("takaakki","brown"));
-        words.add(new Word("topoppi","gray"));
-        words.add(new Word("kululli","black"));
-        words.add(new Word("kelelli","white"));
-        words.add(new Word("topiisә","dusty yellow"));
-        words.add(new Word("chiwiitә","mustard yellow"));
+        words.add(new Word("wetetti","red",R.drawable.color_red ));
+        words.add(new Word("chokokki","green", R.drawable.color_green ));
+        words.add(new Word("takaakki","brown", R.drawable.color_brown));
+        words.add(new Word("topoppi","gray", R.drawable.color_gray));
+        words.add(new Word("kululli","black", R.drawable.color_black));
+        words.add(new Word("kelelli","white", R.drawable.color_white));
+        words.add(new Word("topiisә","dusty yellow", R.drawable.color_dusty_yellow));
+        words.add(new Word("chiwiitә","mustard yellow", R.drawable.color_mustard_yellow));
 
 
         //LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
