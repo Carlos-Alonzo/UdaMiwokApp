@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,8 +22,11 @@ import static android.R.attr.resource;
 
 public class WordAdapter extends ArrayAdapter<Word>
 {
-    public WordAdapter(@NonNull Context context, ArrayList<Word> words ) {
+    private int colorRscId;
+
+    public WordAdapter(@NonNull Context context, ArrayList<Word> words, int backcolor ) {
         super(context, 0, words);
+        colorRscId=backcolor;
     }
 
     @NonNull
@@ -42,6 +46,11 @@ public class WordAdapter extends ArrayAdapter<Word>
 
         TextView defaultText = (TextView) activeView.findViewById(R.id.tv2);
         defaultText.setText(word.getEnglish());
+
+        View textContainer = activeView.findViewById(R.id.text_container);
+        int bColor = ContextCompat.getColor(getContext(),colorRscId);
+
+        textContainer.setBackgroundColor(bColor);
 
         ImageView wordImg = (ImageView) activeView.findViewById(R.id.wordpic);
 

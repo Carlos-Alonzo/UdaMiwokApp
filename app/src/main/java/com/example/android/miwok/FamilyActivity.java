@@ -44,7 +44,7 @@ public class FamilyActivity extends AppCompatActivity {
 
         //LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
 
-        WordAdapter itemsAdapter = new WordAdapter(this, words);
+        WordAdapter itemsAdapter = new WordAdapter(this, words, R.color.category_family);
 
         ListView listView = (ListView) findViewById(R.id.List);
 
