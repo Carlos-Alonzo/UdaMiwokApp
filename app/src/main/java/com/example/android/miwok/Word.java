@@ -14,6 +14,12 @@ public class Word {
 
     private int imageID;
 
+    public int getSoundRscID() {
+        return soundRscID;
+    }
+
+    private int soundRscID;
+
     public Word() {
     }
 
@@ -21,11 +27,13 @@ public class Word {
         this.miwok = mwok;
         this.english = eng;
         imageID=-1;
+        soundRscID=0;
     }
-    public Word(String mwok, String eng, int id) {
+    public Word(String mwok, String eng, int id, int audioID) {
         this.miwok = mwok;
         this.english = eng;
-        imageID=id;
+        this.imageID=id;
+        this.soundRscID=audioID;
 
     }
 
